@@ -9,10 +9,11 @@ const ClubMember = (member: Member) => {
             <p className="font-bold  text-lg">Team: </p>
             <p className='text-lg'>{member.team}</p>
           </div>
-          <div className='flex flex-row gap-2 justify-center items-center'>
-            <p className="font-bold  text-lg">LinkedIn: </p>
-            <p className='text-lg'>{member.linkedIn}</p>
-          </div>
+          {member.linkedIn && <div className='flex flex-row gap-2 justify-center items-center'>
+            <p className="font-bold text-lg">LinkedIn:  
+              <a href={member.linkedIn} className="font-normal"> {member.linkedIn}</a>
+            </p>
+          </div>}
         </div>
     </>
   )
